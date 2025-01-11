@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="icon" type="image/png" href="/static/img/logo.png">
+    </head>
+    <body>
+        <div class="register">
+            <form method="POST" action="/register">
+                <h1>REGISTER</h1>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">SUBMIT</button>
+                <p>YOU HAVE AN ACCOUNT?</p>
+                <a href="/login">LOG IN</a>
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </body>
+</html>

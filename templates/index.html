@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="icon" type="image/png" href="/static/img/logo.png">
+    </head>
+    <body>
+        <div class="login">
+            <form method="POST" action="/login">
+                <h1>LOG IN</h1>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">SUBMIT</button>
+                <p>DON'T HAVE AN ACCOUNT?</p>
+                <a href="/register">REGISTER</a>
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </body>
+</html>
